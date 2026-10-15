@@ -1,0 +1,80 @@
+name: Exa Web Search
+
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: Search query
+        required: true
+        type: string
+      numResults:
+        description: Number of results
+        required: false
+        default: '8'
+        type: string
+      type:
+        description: Search mode
+        required: false
+        default: auto
+        type: choice
+        options:
+          - auto
+          - fast
+          - deep
+      livecrawl:
+        description: Live crawl mode
+        required: false
+        default: fallback
+        type: choice
+        options:
+          - fallback
+          - preferred
+      contextMaxCharacters:
+        description: Optional maximum context characters
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run Exa search
+        env:
+          QUERY: ${{ inputs.query }}
+          NUM_RESULTS: ${{ inputs.numResults }}
+          SEARCH_TYPE: ${{ inputs.type }}
+          LIVECRAWL: ${{ inputs.livecrawl }}
+          CONTEXT_MAX_CHARACTERS: ${{ inputs.contextMaxCharacters }}
+        run: |
+          args=(--query "$QUERY")
+
+          if [[ -n "$NUM_RESULTS" ]]; then
+            args+=(--numResults "$NUM_RESULTS")
+          fi
+
+          if [[ -n "$SEARCH_TYPE" ]]; then
+            args+=(--type "$SEARCH_TYPE")
+          fi
+
+          if [[ -n "$LIVECRAWL" ]]; then
+            args+=(--livecrawl "$LIVECRAWL")
+          fi
+
+          if [[ -n "$CONTEXT_MAX_CHARACTERS" ]]; then
+            args+=(--contextMaxCharacters "$CONTEXT_MAX_CHARACTERS")
+          fi
+
+          node scripts/exa-search.mjs "${args[@]}"

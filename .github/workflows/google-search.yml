@@ -1,0 +1,46 @@
+name: Google Web Search
+
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: Search query
+        required: true
+        type: string
+      numResults:
+        description: Number of results (1–10)
+        required: false
+        default: '8'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run Google search
+        env:
+          QUERY: ${{ inputs.query }}
+          NUM_RESULTS: ${{ inputs.numResults }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+        run: |
+          args=(--query "$QUERY")
+
+          if [[ -n "$NUM_RESULTS" ]]; then
+            args+=(--numResults "$NUM_RESULTS")
+          fi
+
+          node scripts/google-search.mjs "${args[@]}"
