@@ -52,6 +52,13 @@ switch (action) {
     method = "POST"
     requestBody = body
     break
+  case "update-collection":
+    if (!collectionId) fail("COLLECTION_ID is required for update-collection.")
+    if (!updateMask) fail("UPDATE_MASK is required for update-collection.")
+    url = `${collectionPath}?updateMask=${encodeURIComponent(updateMask)}`
+    method = "PATCH"
+    requestBody = body
+    break
   case "delete-collection":
     if (!collectionId) fail("COLLECTION_ID is required for delete-collection.")
     url = collectionPath
