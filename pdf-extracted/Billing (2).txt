@@ -1,0 +1,347 @@
+Source PDF: Billing (2).pdf
+
+Pages: 3
+
+
+========================
+PAGE 1 (embedded text)
+========================
+Bil Elektrik Anda
+ALAMAT POS
+XXXXXXXXXXXXXX
+XXXXXXX,
+JALAN SP 5/1
+TAMAN SERDANG PERDANA
+43300 SERI KEMBANGAN
+SELANGOR
+TARIKH BIL
+23.09.2026
+TEMPOH BIL
+22.08.2026 - 21.09.2026 
+(31 Hari)
+NO. INVOIS
+001415890706
+DEPOSIT SEKURITI
+RM256.04
+NO. AKAUN
+2201258376XX
+JENIS BACAAN
+Bacaan Sebenar 
+TARIF
+Domestik Am
+BAYARAN BAGI TEMPOH 
+22.08.2026 - 21.09.2026
+RM51.10
+Sila imbas bagi pembayaran di Kios @Kedai Tenaga
+2201258376XX001415890706000000000016025
+Biller Code: 5454
+Ref-1:  2201258376XX
+JomPAY online di Perbankan Internet dan Telefon Mudah
+Alih dengan akaun semasa, simpanan atau kad kredit
+Tunggakan Perlu Bayar RM
+80.00
+Amaun Minimum Perlu Bayar Segera RM
+80.00
+Notis Pemotongan Bekalan Elektrik
+Jelaskan tunggakan anda sebelum 01.10.2026
+Pemotongan bekalan elektrik akan dilakukan mulai 02.10.2026 hingga 
+11.10.2026. Sila rujuk notis pemotongan di muka surat belakang.
+Jumlah Bil Anda (RM)
+160.25
+Sila bayar sebelum
+23 Okt 2026
+KLIK DI SINI UNTUK 
+PEMBAYARAN
+Baki Terdahulu (RM)
+80.00
+Caj Semasa (RM)
+80.26
+Pelarasan Penggenapan 
+−0.01
+Ringkasan Bil Anda:
+Untuk maklumat terperinci, sila rujuk di muka surat sebelah
+Dengan peluasan perlindungan bil elektrik sehingga 800 kWj sebulan, pelarasan bagi Caj AFA, Caj Peruncitan dan 
+Cukai Perkhidmatan bagi penggunaan Sep 2026 akan dikreditkan dalam bil Okt 2026.
+Aras 3, Tower D, TNB Platinum, No. 3, Jln Bkt Pantai, Bangsar, 59100 Kuala Lumpur.
+Nombor Pendaftaran ST W10-1808-31022372
+ms 1 / 3
+e-Invois
+Caj Dan Penggunaan Bulanan Elektrik Anda Bagi Tempoh 6 Bulan
+Caj Bulanan (RM)
+ BS - Bacaan Sebenar
+APR-26
+ (BS) RM61.85
+ (BS) RM56.80
+MEI-26
+ (BS) RM73.10
+JUN-26
+ (BS) RM65.55
+JUL-26
+ (BS) RM65.55
+OGO-26
+ (BS) RM80.25
+SEP-26
+Penggunaan (kWh)
+kWh
+0
+70
+140
+210
+280
+350
+Apr-26
+Mei-26
+Jun-26
+Jul-26
+Ogo-26
+Sep-26
+282
+259
+307
+299
+299
+335
+Purata Penggunaan Anda : 297 kWh
+
+
+========================
+PAGE 2 (embedded text)
+========================
+Bil Terperinci Anda
+NO. AKAUN
+2201258376XX
+ALAMAT PREMIS
+XXXXXXX,
+JALAN SP 5/1
+TAMAN SERDANG PERDANA
+43300 SERI KEMBANGAN
+SELANGOR
+Tempoh Bil
+Kegunaan TNB
+No. MRU
+: 18012813
+No. Sequence
+: 0092
+Bil
+: OPC
+Imbas atau                               untuk
+mendapatkan penyata terperinci
+akaun anda
+KLIK DISINI
+ 22.08.2026 - 21.09.2026 (31 Hari)
+Pecahan Pengiraan Bil Anda
+Jenis Caj
+Tanpa Cukai 
+Perkhidmatan
+Dengan Cukai 
+Perkhidmatan
+Jumlah
+Jumlah Penggunaan Anda
+kWh
+335.00
+0.00
+335.00
+Caj Penjanaan
+Tenaga (RM0.2703/kWh)
+RM
+90.55
+0.00
+90.55
+AFA (108kWh, RM0.00/kWh) mulai 01/08/26
+RM
+0.00
+0.00
+0.00
+AFA (227kWh, RM0.00/kWh) mulai 01/09/26
+RM
+0.00
+0.00
+0.00
+Kapasiti (RM0.0455/kWh)
+RM
+15.24
+0.00
+15.24
+Caj Rangkaian (RM0.1285/kWh)
+RM
+43.05
+0.00
+43.05
+Caj Peruncitan
+RM
+0.00
+0.00
+0.00
+Caj-Caj Lain
+Insentif Cekap Tenaga (-RM0.21/kWh)
+RM
+-70.35
+0.00
+-70.35
+Caj Penggunaan Bulan Semasa
+RM
+78.49
+0.00
+78.49
+Cukai Perkhidmatan (8%)
+RM
+0.00
+KWTBB (1.6%)
+RM
+1.26
+Surcaj Lewat Bayar
+RM
+0.51
+Caj Semasa
+RM
+80.26
+TNB BANGI
+LOT 1, JLN 6C/13,BANDAR BARU 
+BANGI
+43650 BANDAR BARU BANGI
+SELANGOR
+ 
+Kedai Tenaga Terdekat :
+Perlu Bantuan?
+1-300-88-5454
+Pertanyaan akaun dan bil
+15454
+Gangguan bekalan elektrik di 
+rumah dan lampu jalan
+CareLine@myTNB.my
+TNB CareLine
+Tenaga_Nasional
+Aras 3, Tower D, TNB Platinum, No. 3, Jln Bkt Pantai, Bangsar, 59100 Kuala Lumpur.
+Nombor Pendaftaran ST W10-1808-31022372
+ms 2 / 3
+Amaun : RM51.10
+Tarikh  : 15.09.2026
+MAKLUMAT BAYARAN AKHIR 
+NOTIS PEMOTONGAN BEKALAN ELEKTRIK
+Berkuatkuasa pada 23.09.2026
+Jumlah RM80.00 merupakan jumlah bil elektrik yang tertunggak sepertimana dinyatakan pada bil 
+bertarikh 23.08.2026 dan masih belum dijelaskan sehingga kini.
+Sila buat pembayaran minimum RM80.00 sebelum/pada 01.10.2026. Kegagalan untuk 
+membayar amaun tersebut sepenuhnya di dalam tempoh yang ditetapkan akan menyebabkan 
+tindakan pemotongan bekalan elektrik dilaksanakan di premis ini antara 02.10.2026 sehingga 
+11.10.2026. Sila abaikan notis ini sekiranya bayaran telah dijelaskan sepenuhnya.
+Surcaj 1% akan dikenakan bagi sebarang kelewatan pembayaran bil elektrik selepas tempoh 30 
+hari daripada tarikh bil dikeluarkan.
+Perkara di atas selaras dengan Peraturan Bekalan Pemegang Lesen 1990 (Pindaan 2025).
+Saluran Pembayaran
+e-WALLET
+(Boost App, Touch ‘n Go eWallet)
+KIOS @ KEDAI TENAGA
+EPAY
+(Petronas, Caltex, KK Mart, dll)
+PERBANKAN INTERNET
+myTNB
+FIUU
+(7-Eleven, 99 Speed Mart & 
+Caring Pharmacy)
+Bayaran melalui cek sah setelah 
+penjelasan cek oleh bank
+Untuk maklumat lanjut, 
+sila layari www.mytnb.com.my
+Kadar Mekanisme Pelarasan Kos 
+Bahan Api Secara Automatik 
+(AFA) untuk penggunaan bulanan 
+melebihi 800 kWh bagi tempoh bil:
+i. 01.08.2026 - 31.08.2026: Surcaj 
+RM0.038/kWh
+ii. 01.09.2026 - 30.09.2026: Surcaj 
+RM0.0367/kWh
+i. Caj Peruncitan dikecualikan bagi 
+penggunaan sehingga 800 kWh
+ii. Cukai Perkhidmatan (8%) akan 
+dikenakan bagi:
+• Penggunaan tenaga yang 
+melebihi 800 kWh untuk tempoh 
+bil 28 hari dan ke atas; atau
+• Jumlah keseluruhan penggunaan 
+tenaga sekiranya tempoh bil adalah 
+kurang daripada 28 hari
+
+
+========================
+PAGE 3 (embedded text)
+========================
+Bil Terperinci Anda
+NO. AKAUN
+2201258376XX
+ALAMAT PREMIS
+XXXXXXX,
+JALAN SP 5/1
+TAMAN SERDANG PERDANA
+43300 SERI KEMBANGAN
+SELANGOR
+Tempoh Bil
+Kegunaan TNB
+No. MRU
+: 18012813
+No. Sequence
+: 0092
+Bil
+: OPC
+Imbas atau                               untuk
+mendapatkan penyata terperinci
+akaun anda
+KLIK DISINI
+ 22.08.2026 - 21.09.2026 (31 Hari)
+Maklumat Meter
+No. Meter
+Bacaan Meter
+Dahulu
+Semasa
+Penggunaan
+Unit
+M   HOL1052003017744
+12,320
+12,655
+335
+kWh
+M   HOL1052003017744
+108
+110
+2
+kW
+M   HOL1052003017744
+4,501
+4,593
+92
+kVARh
+Aras 3, Tower D, TNB Platinum, No. 3, Jln Bkt Pantai, Bangsar, 59100 Kuala Lumpur.
+Nombor Pendaftaran ST W10-1808-31022372
+ms 3 / 3
+Amaun : RM51.10
+Tarikh  : 15.09.2026
+MAKLUMAT BAYARAN AKHIR 
+Untuk maklumat lanjut, 
+sila layari www.mytnb.com.my
+Saluran Pembayaran
+e-WALLET
+(Boost App, Touch ‘n Go eWallet)
+KIOS @ KEDAI TENAGA
+EPAY
+(Petronas, Caltex, KK Mart, dll)
+PERBANKAN INTERNET
+myTNB
+FIUU
+(7-Eleven, 99 Speed Mart & 
+Caring Pharmacy)
+TNB BANGI
+LOT 1, JLN 6C/13,BANDAR BARU 
+BANGI
+43650 BANDAR BARU BANGI
+SELANGOR
+ 
+Kedai Tenaga Terdekat :
+Perlu Bantuan?
+1-300-88-5454
+Pertanyaan akaun dan bil
+15454
+Gangguan bekalan elektrik di 
+rumah dan lampu jalan
+CareLine@myTNB.my
+TNB CareLine
+Tenaga_Nasional
