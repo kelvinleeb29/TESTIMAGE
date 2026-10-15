@@ -1,0 +1,46 @@
+name: Convert PDFs to PNG images
+
+on:
+  push:
+    paths:
+      - '**.pdf'
+      - 'scripts/render_pdfs_to_png.py'
+      - '.github/workflows/pdf-to-images.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pdf-to-images
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF renderer
+        run: python -m pip install --upgrade pymupdf
+
+      - name: Render PDF pages to PNG
+        run: python scripts/render_pdfs_to_png.py
+
+      - name: Commit rendered images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pdf-images/
+          if git diff --cached --quiet; then
+            echo "No rendered image changes to commit."
+          else
+            git commit -m "Render PDF pages as PNG images"
+            git push
+          fi
