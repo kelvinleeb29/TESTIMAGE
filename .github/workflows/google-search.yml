@@ -1,16 +1,79 @@
-name: Google Web Search
+name: Google Search and Vector Search
 
 on:
   workflow_dispatch:
     inputs:
-      query:
-        description: Search query
+      operation:
+        description: Choose Google Web Search or a Vector Search API operation
         required: true
+        type: choice
+        default: web-search
+        options:
+          - web-search
+          - vector-search
+          - list-collections
+          - get-collection
+          - create-collection
+          - delete-collection
+          - query-data-objects
+          - get-data-object
+          - create-data-object
+          - update-data-object
+          - delete-data-object
+      query:
+        description: Web search query (used only for web-search)
+        required: false
         type: string
       numResults:
-        description: Number of results (1–10)
+        description: Web search result count (1–10)
         required: false
         default: '8'
+        type: string
+      projectId:
+        description: Google Cloud project ID (Vector Search operations)
+        required: false
+        type: string
+      location:
+        description: Google Cloud location, for example us-central1
+        required: false
+        type: string
+      apiVersion:
+        description: Vector Search REST API version
+        required: true
+        default: v1
+        type: choice
+        options:
+          - v1
+          - v1beta
+      collectionId:
+        description: Collection ID (required for most Vector Search operations)
+        required: false
+        type: string
+      dataObjectId:
+        description: Data object ID (create/get/update/delete)
+        required: false
+        type: string
+      searchField:
+        description: Vector field to search, for example plot_embedding
+        required: false
+        type: string
+      vectorValues:
+        description: JSON array of embedding numbers, for example [0.1,0.2,0.3]
+        required: false
+        type: string
+      topK:
+        description: Number of nearest neighbors to return (1–1000)
+        required: false
+        default: '10'
+        type: string
+      requestBody:
+        description: JSON body for collection/data-object create, update, or query operations
+        required: false
+        default: '{}'
+        type: string
+      updateMask:
+        description: Field mask for update-data-object, for example data,vectors
+        required: false
         type: string
 
 permissions:
@@ -19,7 +82,7 @@ permissions:
 jobs:
   search:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 10
 
     steps:
       - name: Check out repository
@@ -30,7 +93,9 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Run Google search
+      # Preserve the existing Custom Search Engine workflow and credentials.
+      - name: Run Google Web Search
+        if: inputs.operation == 'web-search'
         env:
           QUERY: ${{ inputs.query }}
           NUM_RESULTS: ${{ inputs.numResults }}
@@ -44,3 +109,31 @@ jobs:
           fi
 
           node scripts/google-search.mjs "${args[@]}"
+
+      # The service-account JSON must be stored as the GOOGLE_SERVICE_ACCOUNT_JSON secret.
+      - name: Authenticate to Google Cloud
+        id: google-auth
+        if: inputs.operation != 'web-search'
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/cloud-platform
+          create_credentials_file: false
+
+      - name: Run Google Cloud Vector Search REST operation
+        if: inputs.operation != 'web-search'
+        env:
+          VECTOR_ACTION: ${{ inputs.operation }}
+          GCP_PROJECT_ID: ${{ inputs.projectId }}
+          GCP_LOCATION: ${{ inputs.location }}
+          VECTOR_API_VERSION: ${{ inputs.apiVersion }}
+          COLLECTION_ID: ${{ inputs.collectionId }}
+          DATA_OBJECT_ID: ${{ inputs.dataObjectId }}
+          SEARCH_FIELD: ${{ inputs.searchField }}
+          VECTOR_VALUES_JSON: ${{ inputs.vectorValues }}
+          TOP_K: ${{ inputs.topK }}
+          REQUEST_BODY_JSON: ${{ inputs.requestBody }}
+          UPDATE_MASK: ${{ inputs.updateMask }}
+          GOOGLE_ACCESS_TOKEN: ${{ steps.google-auth.outputs.access_token }}
+        run: node scripts/vector-search.mjs
