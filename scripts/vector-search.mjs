@@ -95,11 +95,11 @@ switch (action) {
     url = `${collectionPath}/dataObjects:search`
     method = "POST"
     requestBody = {
-      vector_search: {
-        search_field: searchField,
+      vectorSearch: {
+        searchField,
         vector: { values: vector },
-        top_k: topK,
-        output_fields: { data_fields: "*", vector_fields: "*", metadata_fields: "*" }
+        topK,
+        outputFields: { dataFields: "*", vectorFields: "*", metadataFields: "*" }
       }
     }
     break
