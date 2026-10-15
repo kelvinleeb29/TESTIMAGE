@@ -14,6 +14,7 @@ on:
           - list-collections
           - get-collection
           - create-collection
+          - update-collection
           - delete-collection
           - query-data-objects
           - get-data-object
