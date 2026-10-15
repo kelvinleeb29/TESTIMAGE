@@ -135,5 +135,21 @@ if (!response.ok) {
   fail(`Vector Search API error (${response.status} ${response.statusText}): ${detail}`)
 }
 
-process.stdout.write(`VECTOR_ACTION: ${action}\nHTTP_STATUS: ${response.status}\n`)
-process.stdout.write(typeof payload === "string" ? payload + "\n" : JSON.stringify(payload, null, 2) + "\n")
+process.stdout.write(`VECTOR_ACTION: ${action}\\nHTTP_STATUS: ${response.status}\\n`)
+
+if (action === "list-collections") {
+  // Print only collection identifiers so GitHub Actions does not mask the whole response.
+  const collections = Array.isArray(payload?.collections) ? payload.collections : []
+  const ids = collections.map((collection) => {
+    const fullName = typeof collection?.name === "string" ? collection.name : ""
+    return fullName ? fullName.split("/").pop() : (collection?.collectionId || collection?.id || null)
+  }).filter((id) => typeof id === "string" && id.length > 0)
+
+  process.stdout.write(`COLLECTION_COUNT: ${collections.length}\\n`)
+  process.stdout.write(`COLLECTION_IDS: ${JSON.stringify(ids)}\\n`)
+  if (collections.length === 0) {
+    process.stdout.write(`RESPONSE_KEYS: ${JSON.stringify(Object.keys(payload || {}))}\\n`)
+  }
+} else {
+  process.stdout.write(typeof payload === "string" ? payload + "\\n" : JSON.stringify(payload, null, 2) + "\\n")
+}
