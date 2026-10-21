@@ -1,0 +1,39 @@
+name: Extract PNG OCR
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/extract-png-ocr.yml"
+      - "extract_png_ocr.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extract-ocr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Python and Tesseract
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr
+          python -m pip install --upgrade pip
+          python -m pip install pillow pytesseract requests
+
+      - name: Run OCR on the requested PNG
+        run: |
+          python extract_png_ocr.py "https://raw.githubusercontent.com/kelvinleeb29/TESTIMAGE/main/2026-10-21_111339.png" --output 2026-10-21_111339.txt
+
+      - name: Upload OCR text
+        uses: actions/upload-artifact@v4
+        with:
+          name: png-ocr-text
+          path: 2026-10-21_111339.txt
+          if-no-files-found: error
+          retention-days: 7
