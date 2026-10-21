@@ -1,0 +1,607 @@
+Q Search “K English ER
+Overview
+Credentials v1.0.0 | | OpenAPI 3.1.0
+RUtRentcaton 360 Merchant API 360
+Signing — mdfive_val Download OpenAPI Document Server
+Receiving callbacks https://360payhk.asia/api v
+Deposit <2 Overview Production
+Create a bank deposit POST i- . A H 7
+Multi-channel payment gateway: deposits (collection), withdrawals (payout), balance and Authentication Required merchant &/ Authorization ©
+Create an FPS (kuaizhuan) Post bank-list queries, plus signed server-to-merchant callbacks.
+deposit Merchant: header
+Your merchant Code.
+Query a deposit order POST Environment § Base URL
+F Name: merchant x
+Withdraw > Production https: //368payhk.asia/api
+Value: QUxMIFIPVVIGQkFTRSBBUKUgQkVMTOSHIFRPIFVT ®
+Merchant > ; ; ; ;
+; Staging https: //staging.368onLinehk.com/api Authorization: header
+PosT
+Oustyjaidepesitiorder, The value: Basic base64(Code:API Password). Generate it in the tester's Auth tab (bottom-righ... More
+Withdraw > All endpoints are HTTP POST (JSON in, JSON out). Every response uses the same envelope: _
+Name: Authorization 4
+>
+merchant field type meaning Value:, QUXMIFIPYVIGOKETRSBRUKUGQKYMTOSHIERPIEVT,, .c seatcr 9 munis wou woutsune trypies wr’
+Query a deposit order PosT _
+status int 1 success, @ failure Name: Authorization x
+Withdraw >
+. Value: QUxMIFIPVVIgQkFTRSBBUKUgQkVMTOSHIFRPIFVT Ks)
+Merchant > code string result code (SUCCESS, INVALID_PARANMS, ...)
+Callbacks > message _string | null detail; null on success CASE SELES
+4 j ass
+Models V ; >_ Shell 4 Ruby ® Node.js @ PHP @® Python More
+data object | array payload
+Error Shell Curt
+@usryia depeatborder vost Decide success from G5)/ GESEE) not the HiTP status — auth errors retum/HTTP 400 Ine VaIUG. Dao VasCUs\WUUG-AG! F GooWwUIU). UCHEIGLS IL WIG LootS! 9 AUUT tay WWUKUT igi. wiurs
+with the reason in code. Name: Authorization x
+Withdraw >
+Value: QUxMIFIPVVIgQkFTRSBBUKUgQkVMTOSHIFRPIFVT Ks)
+Merchant > .
+Credentials a
+Callbacks > Client Libraries
+Models J Get them in the Merchant Portal > Merchant Profile ( /web/profiles ): >. Shell 4 Ruby Nodes @ PHP ® Python ey niore
+Error Portal label Used as Shell Curt
+Ine VaIUG. Dao VasCUs\WUUG-AG! F GooWwUIU). UCHEIGLS IL WIG LootS! 9 AUUT tay WWUKUT igi. wiurs
+Query a deposit order post Code the merchant header and Basic-auth username a
+Name: Authorization 4
+Withdraw > .
+API Password Basic-auth password Value: QUxMIFIPVVIgQkFTRSBBUKUgQkKVMTOSHIFRPIFVT ®
+Merchant >
+extibea API Signature the secret used to sign mdfive_val (only if signing is enabled) Client Libraries
+allbacks >
+Model V . . >_ Shell 4 Ruby ® Node.js @ PHP @® Python More
+odels API Password and API Signature are shown once (after a Google-Authenticator OTP) —
+Error copy them then. An administrator must reset a lost key. Shell Curt
+Ine VaIUG. Dao VasCUs\WUUG-AG! F GooWwUIU). UCHEIGLS IL WIG LootS! 9 AUUT tay WWUKUT igi. wiurs
+Query a deposit order POST . .
+Authentication Name: Authorization x
+Withdraw >
+Send two headers on every request: Value: QUxMIFIPVVIgQkFTRSBBUKUgQkVMTOSHIFRPIFVT ®
+Merchant >
+Callbacks > Header Value Client Libraries
+>_ Shell 4 Ruby ® Node.js @ PHP @® Python More
+Models ¥ merchant your Code
+Error Shell Curt
+Authorization Basic base64(Code + ":" + API Password) hie value. vas vascus\WuUT.nr! Fr aoowuruy. UCHEIate 1H Une Lote! 9 Muu tay WLU gin. ure
+Query a deposit order PosT
+Name: Authorization x
+Withdraw > Build it: join your Code and API Password as Code:API Password, Base64-encode, prefix with
+5 Value: QUxMIFIPVVIgQkFTRSBBUKUgQkVMTOSHIFRPIFVT Ks)
+Basic .
+Merchant >
+Callbacks > . Client Libraries
+MERCHANT6O01:secretpass > base64 > TUVSQOhHBTLQWMDE6c2VjcmVOcGFzcw=
+Models v merchant: MERCHANTOO1 >. Shell 4 Ruby ® Node,js @ PHP @ Python ~ More
+Authorization: Basic TUVSQOhBTLQWMDEéc2VjcmVOcGFzcw=
+Error : 4 3 Shell Curt
+Ine VaIUG. Dao VasCUs\WUUG-AG! F GooWwUIU). UCHEIGLS IL WIG LootS! 9 AUUT tay WWUKUT igi. wiurs
+Query a deposit order POST If IP whitelisting is enabled on your account, the call must also come from a whitelisted IP. —
+Name: Authorization 4
+Withdraw > 5 A = =
+Try it on this page. First open the tester (bottom-right > Auth tab) and enter your Code + Value: QUxMIFIPVVIgQkF TRSBBUKUgQKVMTOSHIFRPIFVT ©
+Merchant > API Password to generate the Authorization value. Then open the Authentication panel (top-
+Callbacks > right of any endpoint) and set just two fields: merchant = your Code, Authorization = the Client Libraries
+ees generated value. Click Test Request to send it live — endpoints run one at a time, there is no >_ Shell @ Ruby ® Nodejs @ PHP ® Python ~ More
+Vv
+run-all.
+Error Shell Curt
+P ae Ine VaIUG. Dao VasCUs\WUUG-AG! F GooWwUIU). UCHEIGLS IL WIG LootS! 9 AUUT tay WWUKUT igi. wiurs
+Query a deposit order POST Signing — mdfive_val
+Withdraw > Name: Authorization %
+Signing is optional per merchant and off by default. When an administrator enables it, every
+a 5 5 Value: QUxMIFIPVVIgQkFTRSBBUKUgQkVMTOSHIFRPIFVT Ks)
+Merchant > deposit/withdraw create request must include mdfive_vat (the field uses HMAC-SHA256). g g
+Callbacks > Build it: Client Libraries
+Models v 1. Take the endpoint's signed fields (each create endpoint lists them). >_ Shell 42 Ruby ® Nodejs @ PHP @ Python More
+Error 2. Sort the keys ascending and form a http_build_query string k=v&k=v (space > +). Shell Curl
+Quenya dapeainordar _— 3. derived = HMAC_SHA256("signing", API Signature). Ine VaIUG. Dao VasCUs\WUUG-AG! F GooWwUIU). UCHEIGLS IL WIG LootS! 9 AUUT tay WWUKUT igi. wiurs
+Withdraw > A. ndfive_val = HMAC_SHA256(query, derived) — lowercase hex. Name: Authorization x
+Value: QUxMIFIPVVIgQkFTRSBBUKUgQkVMTOSHIFRPIFVT Ks)
+Merchant > Example (apr Signature = abcdefgh23456789 ):
+Callbacks > Client Libraries
+Models amount=100 . 00&calLback_url=https%3A%2F%2Fm.example.com%2Fcb&redirect_url=https%35A% 2
+v i on
+i derived = 2d1a7d31c49F5b9F47cdd293ef22242aa24F21d4c314dea9074c4F5035d0bb00 >. Shell 43 Ruby ® Node/js @ PHP ® Python More
+Error mdfive_val = 40585e7cadc5482714d897c6F5F9F378558cf52F8a2bcca7d1a9%alb3s8ebcobs86 Shell Curt
+P 2 EEC Ine VaIUG. Dao VasCUs\WUUG-AG! F GooWwUIU). UCHEIGLS IL WIG LootS! 9 AUUT tay WWUKUT igi. wiurs
+Withdraw > “I E ‘ , \ y
+Merchant > Check yours with the Signature tester (bottom-right). Query responses and callbacks also Name: Authorization x
+exbests 5 Carry an mdfive_val — verify it the same way. Value: QUXMIFIPVVIgQkFTRSBBUKUgQkVMTOSHIFRPIFVT ®
+Wsels ¥ Receiving callbacks Client Libraries
+Error a j oD
+On a final state the gateway POSTs form-url-encoded fields to the callback_url. you sent on ?- Shell 43 Ruby ® Node,js OF? @ Python Migte
+DepositBankRequest that order: Shell Curt
+Withdraw > | LNG VOIUG. VESIL VOSTUSNUVUUT.NE IP GoQoWwUIUy. UCNTIGUG ILE UNIS UGOLGI OS MUU Lay WUULLUT iyi. WUE
+e Reply HTTP 200 with the body success to acknowledge. _
+Merchant > Name: Authorization %
+¢ Deposit callbacks retry up to 5x (~1 min apart); withdrawal callbacks are sent once.
+Callback > . . Value: QUxMIFIPVVIgQkFTRSBBUKUgQkVMTOSHIFRPIFVT Ks)
+allbacks ¢ status iS COMPLETE (Success) Or REJECT (failed).
+Models Y e If signing is enabled, verify the mdfive_vat field before trusting the callback. Client Libraries
+Error >. Shell 49 Ruby ® Nodejs @ PHP @® Python ~ More
+DepositBankRequest Shell Curt
+Withdraw > LNG VOIUG. VESIL VOSTUSNUVUUT.NE IP GoQoWwUIUy. UCNTIGUG ILE UNIS UGOLGI OS MUU Lay WUULLUT iyi. WUE
+Merchant > Name: Authorization %
+Callbacks > Value: QUxMIFIPVVIgQkFTRSBBUKUgQkVMTOSHIFRPIFVT Ks)
+Models v Client Libraries
+Error >. Shell @ Ruby ® Node.js @ PHP @® Python ~ More
+DepositBankRequest Shell Curt
+Withdraw ; > CicnA ERTS
+> ra j ass
+Marchant 5 - Shell 4 Ruby ® Node.js @ PHP @® Python More
+Callbacks > Shell Curt
+Models Vv
+Error
+DepositBankRequest
+Merchant ; >
+Callbacks >
+Models v °
+Deposit
+Error
+Collection — create a deposit order and query its status. i
+DepositBankRequest us ay Operations
+DepositKuaizhuanRequest POST /deposit/bank_order
+; POST /deposit/kuaizhuan_order
+Callbacks ? POST /deposit/inquiry
+Models v
+Error
+DepositBankRequest
+DepositKuaizhuanRequest
+DepositBankData
+Callbacks ; >
+Models ¥ Create a bank deposit © Auth Required
+Error Creates a bank-transfer deposit order. The response payment_details Carries the bank POST /deposit/bank_order Shell Curl v
+DepositBankRequest account the payer must transfer to.
+1 curl https: //360payhk.asia/api/deposit/bank_order \
+DepositKuaizhuanRequest Signed fields (mdfive_val): amount , tx_id, callback_url, redirect_url. 2 request POST \ . ;
+; 3 —-header ‘Content-Type: application/json' \
+DepositBankData 4 =-header ‘merchant: YOUR_SECRET_TOKEN' \
+a Body - DepositBankRequest required | \ application/json 5 —header ‘Authorization: YOUR_SECRET_TOKEN' \
+Callbacks > f ~ -
+6 —data '‘{
+Models v amount string required Example if "amount": "100.00",
+Deposit amount, up to 2 decimals; within your min/max. 8 "tx_id": "ORDER-20260606-0001",
+Error 9 "callback_url": "https: //merchant.example.com/deposit/callback",
+; callback_url string - uri required Example 10 "pedirect_url": “https: //merchant.example.com/return",
+DepositBankRequest 11 "bank_code": "HSBC"
+Server-to-server result URL. '
+DepositKuaizhuanRequest 12 }
+DepositBankData redirect_url string - uri required Example
+: ; Where the payer is returned after paying.
+Callbacks > Gane
+Models y transferror_name string required
+¢
+Required — payer name. Send it on every deposit. If you cannot provide it, contact us to enable the 200 GD GS) Cae @) Siueawei
+Error required_transferror feature on your account; you may then omit this field and the payer enters their name {
+DepositBankRequest on the payment page. "status": 1,
+"code": "SUCCESS",
+DepositKuaizhuanRequest tid string - min length: 6 - max length: 200 required Example "message": null,
+; F , inaui "data": {
+D itBankDat Your unique transaction reference (per merchant). Reused for inquiry & callbacks. .
+a “order_id": "DP1717650000AB12CD34EF56",
+Callbacks ; > bank_code string Example “message”: null, anaZnznZ (annain
+Models y Optional — from /withdraw/get_bank_list; must match a known bank. "data": {
+“order_id": "DP1717650000AB12CD34EF56",
+Error adfive_val string "tx_id": "ORDER-20260606-0001",
+A Ps = r wee “order_amount": "100.00",
+DepositBankRequest Signature over amount, tx_id, callback_url, redirect_url. Required only when signing is enabled. “service_change": "2.00"
+D itKuaizhuanR “final_amount": "98.00",
+epositKuaizhuanRequest oe “transferror_name": "",
+DepositBankData “payment_details": {
+“bank_name": "HSBC",
+Callbacks > > 208 Success. “account_name": "ABC LTD",
+5 5 . ; 5 ; “account_number": "123-456789-001",
+Models v > 486 Business failure: duplicate tx_id, method not subscribed, gateway maintenance, etc. "pedirect_url": "https: //360linktree.com/redirect/DP1717650000AB12CD34EF56"
+Error > 483 Deposit service disabled for the merchant, or an auth failure. } }
+DepositBankRequest > 422 Validation failed, or signature missing/invalid.
+Success.
+DepositKuaizhuanRequest
+DepositBankData
+Models v
+Error
+DepositBankRequest
+DepositKuaizhuanRequest ° °
+Create an FPS (kuaizhuan) deposit & Auth Required
+DepositBankData
+iibepositKuaizhuanData Creates an FPS / kuaizhuan deposit order (HKD systems). The response payment_details POST /deposit/kuaizhuan_order Shell Curl v
+carries the FPS name and mobile number the payer uses.
+Models v 1 curl https: //368payhk.asia/api/deposit/kuaizhuan_order \
+F Signed fields (mdfive_val): amount , tx_id, callback_url, redirect_url. 2 —request POST \ . .
+tor 3 —-header ‘Content-Type: application/json' \
+D itBankR t 4 —-header ‘merchant: YOUR_SECRET_TOKEN' \
+shane Body’ - DepositkusizhuanRequest required] ))( application/json 5  —header ‘Authorization: YOUR_SECRET_TOKEN" \
+DepositKuaizhuanRequest 6 —data '{
+amount string required Example 7 "amount": "100.00",
+DepositBankData Deposit amount, up to 2 decimals; within your min/max. 8  "tx_id": "ORDER-20260606-0002",
+. . 9 "callback_url": "https: //merchant.example.com/deposit/callback",
+__DepositKuaizhuanData " « neon 3 "
+calUback_url string - uri required Example 10 redirect_url": “https: //merchant.example.com/return
+aa 0
+Models v Server-to-server result URL. }
+DepositBankRequest Where the payer is returned after paying.
+Eas Ete 200 400 403 422 (& Show Schema
+DepositKuaizhuanRequest . . =a
+transferror_name string required Example {
+DepositBankData Required — payer name. Send it on every deposit. If you cannot provide it, contact us to enable the "status": 1,
+DepositKuaizhuanData required_transferror feature on your account; you may then omit this field and the payer enters their name "code": "SUCCESS",
+on the payment page. _ status": 1,
+Models Y, "code": "SUCCESS",
+Error tc id string - min length: 6 - max length: 200 required Example "message": null,
+Your unique transaction reference (per merchant). "data": {
+DepositBankRequest “order_id": "DP1717650000FF99GG88HH77",
+adfive_val string "“tx_id": "ORDER-20260606-0002",
+DepositKuaizhuanRequest " neon "
+Signature over amount, tx_id, callback_url, redirect_url. Required only when signing is enabled. eer cer ae a . 30" .
+DepositBankData senvicelc ange": z 5
+“final_amount": "98.00",
+__DepositKuaizhuanData Responses “transferror_nane": wD
+“payment_details": {
+Models v “name": "ABC LTD",
+— > 200 Success: “mobile_no": "61234567",
+> 488 Business failure: duplicate tx_id, method not subscribed, gateway maintenance, etc. redirect_ur Us: shttps://séelinktnee-com/nedinect/DE1 7476598 00FF9 76638Hn77
+DepositBankRequest }
+DepositKuaizhuanRequest > 483 Deposit service disabled for the merchant, or an auth failure. } }
+DepositBankData > 422 Validation failed, or signature missing/invalid. su .
+__DepositKuaizhuanData
+Models v
+Error
+DepositBankRequest
+DepositKuaizhuanRequest
+DepositBankData
+__DepositKuaizhuanData Query a deposit order © Auth Required
+Models v Looks up one of your deposit orders by your tx_id. POST /deposit/inquiry Shell Curl v
+Error . F F bape z
+Body - IxidRequest required) (appllcation/son 1 curl https: //360payhk.asia/api/deposit/inquiry \
+DepositBankRequest 2 request POST \ oo.
+. . tx_id string - min length: 6 - max length: 200 required Example 2 —header ‘Content-Type: application/json’ \
+DepositKuaizhuanRequest 4 —header ‘merchant: YOUR_SECRET_TOKEN' \
+Your transaction reference used at creation. 5 —header ‘Authorization: YOUR_SECRET_TOKEN' \
+DepositBankData 6 —data '{
+i\neneeinuaeneenpets ee y . "tx_id": "ORDER-20260606-0001"
+Models v
+Error
+> 488 No order with that tx_id for this merchant.
+DepositBankRequest 200 400 422 9 Show Schema
+DepositKuaizhuanRequest > 422 tx_id missing or out of length bounds. {
+. "status": 1,
+DepositBankData "code": "SUCCESS",
+__DepositKuaizhuanData "message": null,
+"data": {
+Models Vv “order_id": "DP1717650000AB12CD34EF56",
+"tx_id": "ORDER-20260606-0001",
+Error “transferror_name": “John Tan",
+DepositBankRequest Saas SAREE
+“order_amount": "100.00",
+DepositKuaizhuanRequest "“service_change": "2.00",
+“final_amount": "98.00"
+DepositBankData }
+__DepositKuaizhuanData }
+Models v Success.
+Error
+DepositBankRequest
+DepositKuaizhuanRequest
+DepositBankData
+__DepositKuaizhuanData
+Models v °
+Withdraw
+Error
+Payout — create a withdrawal, query its status, list banks. ‘i
+DepositBankRequest y nery , Operations
+DepositKuaizhuanRequest POST /withdraw/bank_order
+" mero POST /withdraw/kuvaizhuan_order
+ePoskeahkiets POST /withdraw/inquiry
+__DepositKuaizhuanData POST /withdraw/get_bank_list
+Models v
+Error
+Show More v
+DepositBankRequest
+DepositKuaizhuanRequest
+DepositBankData
+__DepositKuaizhuanData
+Models v
+Merchant
+Error
+DepositBankRequest Account — balance inquiry. Operations
+DepositKuaizhuanRequest POST /merchant/check_balance
+DepositBankData
+__DepositKuaizhuanData
+Show More v
+Models Vv
+Error
+DepositBankRequest
+DepositKuaizhuanRequest
+DepositBankData
+__DepositKuaizhuanData Callbacks
+Models ¥ Server-to-merchant notifications (webhooks). Operations
+Error
+& POST Deposit callback » merchant
+DepositBankRequest & POST Withdraw callback > merchant
+DepositKuaizhuanRequest
+DepositBankData
+Show More v
+__DepositKuaizhuanData
+Models v
+Error
+DepositBankRequest
+DepositKuaizhuanRequest
+DepositBankData Models
+__DepositKuaizhuanData v Error
+Modals Y code string: enum required
+Error machine-readable result code
+DepositBankRequest values
+DepositKuaizhuanRequest "SUECESS
+- INVALID_MERCHANT
+DepositBankData - MERCHANT_BLOCKED
+__DepositKuaizhuanData - INVALID_PARAMS
+Models y — INVALID_SIGNATURE
+Error + Show all values
+DepositBankRequest
+ae = status integer - enum const: 0 required
+DepositKuaizhuanRequest 0 = failure
+DepositBankData values
+__DepositKuaizhuanData ~8
+Models v data
+usually an empty array on error
+Error ieee viene
+DepositBankRequest message string | null
+DepositKuaizhuanRequest .
+v DepositBankRequest
+DepositBankData
+amount string required Example
+= mepositKuaizhuanb ata Deposit amount, up to 2 decimals; within your min/max.
+Models v
+callback_url string - uri required Example
+Error Server-to-server result URL.
+DepositBankRequest
+redirect_url string - uri required Example
+DepositKuaizhuanRequest Where the payer is returned after paying.
+DepositBankData
+transferror_name string required Example
+- -DenositKuaizhuanData Required — payer name. Send it on every deposit. If you cannot provide it, contact us to enable the required_transferror feature on your account; you may then omit this field and the payer enters their name on the
+Models vy payment page.
+Error txid string - min length: 6 - max length: 200 required Example
+DepositBankRequest Your unique transaction reference (per merchant). Reused for inquiry & callbacks.
+DepositKuaizhuanRequest bank_code string Example
+DepositBankData Optional — from /withdraw/get_bank_list; must match a known bank.
+__DepositKuaizhuanData mdfive_val string
+Models y Signature over amount, tx_id, callback_url, redirect_url. Required only when signing is enabled.
+Error z z
+v DepositKuaizhuanRequest
+DepositBankRequest
+amount string required Example
+DepositKuaizhuanRequest Deposit amount, up to 2 decimals; within your min/max.
+DepositBankData
+callback_url string - uri required Example
+. -DenositKuaizhuanData Server-to-server result URL.
+Model
+odels ¥ redirect_url string - uri required Example
+Error Where the payer is returned after paying.
+DepositBankRequest
+a ia transferror_name string required Example
+DepositKuaizhuanRequest Required — payer name. Send it on every deposit. If you cannot provide it, contact us to enable the required_transferror feature on your account; you may then omit this field and the payer enters their name on the
+DepositBankData payment page.
+__DepositKuaizhuanData tc id string - min length: 6 - max length: 200 required Example
+Models v Your unique transaction reference (per merchant).
+Error adfive_val string
+DepositpankRequest Signature over amount, tx_id, callback_url, redirect_url. Required only when signing is enabled.
+DepositKuaizhuanRequest v DepositBankData
+DepositBankData
+final_amount string Example
+__DepositKuaizhuanData Net amount credited to you.
+Models ¥ order_amount string |
+Error
+order_id string Example
+DepositBankRequest Gateway order id.
+DepositKuaizhuanRequest
+payment_details object
+DepositBankData Bank transfer instructions — pay into this account.
+__DepositKuaizhuanData + payment_details
+Models v
+service_change string Example
+Error F
+Service fee.
+DepositBankRequest
+transferror_name string
+DepositKuaizhuanRequest
+; tcid string Example
+DepositBankData
+__DepositKuaizhuanData v DepositKuaizhuanData
+Models v final_amount string Example
+erat order_amount string Example
+DepositBankRequest .
+order_id string
+DepositKuaizhuanRequest
+payment_details object
+DepositBankData FPS (kuaizhuan) instructions — transfer to this name / mobile.
+DepositKuaizhuanData
+Sansa ei + payment_details
+Models v
+service_change string Example
+Error
+DepositBankRequest transferror_name string Example
+DepositKuaizhuanRequest txid string Example
+DepositBankData . .
+v DepositInquiryData
+__DepositKuaizhuanData
+final_amount string Example
+Models v
+adfive_val string
+Sue Present only when signing is enabled — verify it.
+DepositBankRequest
+order_amount string |
+DepositKuaizhuanRequest
+order_id string Example
+DepositBankData
+lEpenocitkuaizhvanData service_change string Example
+Models v status string - enum Example
+values
+Error |
+- PENDING
+DepositBankRequest - COMPLETE
+DepositKuaizhuanRequest ~ REJECT
+. — OVERTIME
+DepositBankData
+__DepositKuaizhuanData transferror_name string Example
+Models v txid string Example
+Error
+v WithdrawBankRequest
+DepositBankRequest
+account_name string required
+DepositKuaizhuanRequest _
+Beneficiary account holder name.
+DepositBankData
+account_number string required Example
+__DepositKuaizhuanData _.
+Beneficiary bank account number.
+Models v
+amount string required Example
+Err Withdrawal amount, 2 decimals; within your min/max.
+DepositBankRequest
+callback_url string - uri required Example
+DepositKuaizhuanRequest
+tid string - min length: 6 - max length: 200 required
+DepositBankData ; . . .
+Your unique transaction reference. Duplicates rejected.
+__DepositKuaizhuanData
+bank_code string Example
+Models v F 7
+Bank code from /withdraw/get_bank_list (resolves the bank name).
+Error
+bank_name string Example
+Pepe METIS eos Optional display name (looked up from bank_code if omitted).
+DepositKuaizhuanRequest
+adfive_val string
+Peo MEI LPELE Signature over amount, tx_id, callback_url, account_number, account_name (+ bank_code if sent). Required only when signing is enabled.
+__DepositKuaizhuanData
+Models < v WithdrawKuaizhuanRequest
+Error
+DepositBankRequest
+DepositKuaizhuanRequest
+DepositBankData
+__DepositKuaizhuanData
+Models v
+Error
+DepositBankRequest
+Derositkusiznuenrecqiest Optional — included in the signature when sent.
+DepositBankData holder_name string
+iibepositKuaizhuanData Optional FPS account holder name.
+Models v adfive_val string
+5 Signature over amount, tx_id, callback_url, mobile_no (+ bank_code if sent). Required only when signing is enabled.
+rror
+DepositBankRequest v WithdrawData
+DepositKuaizhuanRequest final_amount string Example
+DepositBankData amount + fee — total debited from your balance.
+__DepositKuaizhuanData order_amount. string Example
+Models v
+order_id string Example
+Error
+service_change string Example
+DepositBankRequest
+txid string Example
+DepositKuaizhuanRequest
+DepositBankData v WithdrawInquiryData
+__DepositKuaizhuanData final_amount string Example
+Models ¥ adfive_val string
+Error Present only when signing is enabled.
+DepositBankRequest order_amount string Example
+DepositKuaizhuanRequest
+a aad order_id string Example
+DepositBankData
+service_change string Example
+__DepositKuaizhuanData
+status string-enum Example
+Models v values
+Error L PENDING
+DepositBankRequest - COMPLETE
+“_ REJECT
+DepositKuaizhuanRequest
+DepositBankData tcid string Example
+__DepositKuaizhuanData
+v BankItem
+Models v
+bank_code string
+Error Pass as bank_code when creating a withdrawal/deposit.
+DepositBankRequest
+id integer Example
+DepositKuaizhuanRequest Bank id.
+DepositBankData
+name string Example
+__DepositKuaizhuanData
+Models y v BalanceData
+Error balance number Example
+. Current net balance, 2 decimals.
+DepositBankRequest
+DepositKuaizhuanRequest \ TxIdRequest
+DepositBankData . . .
+tx_id string - min length: 6 - max length: 200 required Example
+__DepositKuaizhuanData Your transaction reference used at creation.
+Models v
+v DepositCallbackBody
+Error
+Form-url-encoded fields POSTed to your callback_url.
+DepositBankRequest
+a final_amount string Example
+DepositKuaizhuanRequest
+DepositBankData adfive_val string Example
+Signature (only when signing is enabled).
+__DepositKuaizhuanData
+Models v order_amount string Example
+Error order_id string Example
+DepositBankRequest service_change string Example
+DepositKuaizhuanRequest status string- enum Example
+DepositBankData values
+P F - COMPLETE
+__DenpositKuaizhuanData
+- REJECT
+Models v - OVERTIME
+Error | PENDING
+DepositBankRequest transferror_name string
+_|_DepositKuaizhuanRequest Payer name, or '-'.
+Models Y2 tid string Example
+Error
+v WithdrawCallLbackBody
+DepositBankRequest .
+Form-url-encoded fields POSTed to your callback_url.
+DepositKuaizhuanRequest
+final_amount string Example
+DepositBankData
+mdfive_val string Example
+DepositKuaizhuanData
+Signature (only when signing is enabled).
+DepositinquiryData
+order_amount string Example
+WithdrawBankRequest
+WithdrawKuaizhuanRequest order_id string Example
+WithdrawData service_change string Example
+WithdrawinquiryData status string: enum Example
+| values"
+Models Howard MIT
+Error Voice call
+DepositBankReques'
+ir callback_url.
+DepositKuaizhuanRe
+DepositBankData ¥
+DepositKuaizhuanDz
+see & Accept 2d).
+
+DepositinquiryData
+WithdrawBankRequest
+WithdrawKuaizhuanRequest
+
+WithdrawData
+
+WithdrawinquiryData
+
+Bankitem Mae
+
+- COMPLETE
+BalanceData REJECT
+TxIldRequest _ PENDING
+
+DepositCallbackBody
+
+WithdrawCallbackBody
+
+” Open API Client
+©@ Auth & signature
+Powered by Scalar nC
